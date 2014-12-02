@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Example Domain Project
+Bundle-SymbolicName: net.martenscs.osgi.example.domain
+Bundle-Version: 1.0.0.qualifier
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Meta-Persistence: META-INF/persistence.xml
+Export-Package: net.martenscs.osgi.example.domain;version="1.0.0",
+ net.martenscs.osgi.example.repository;version="1.0.0"
+Import-Package: javax.persistence,
+ javax.sql,
+ net.martenscs.osgi.example.domain.api;version="1.0.0",
+ org.apache.commons.lang.exception;version="2.6.0",
+ org.apache.derby.jdbc,
+ org.apache.openjpa.enhance;version="2.2.1",
+ org.apache.openjpa.persistence;version="2.2.1",
+ org.apache.openjpa.util;version="2.2.1",
+ org.slf4j;version="1.7.2"
+

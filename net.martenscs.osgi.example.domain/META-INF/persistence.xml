@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="sample" transaction-type="JTA">
+		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+		<jta-data-source>osgi:service/javax.sql.DataSource/(osgi.jndi.service.name=datasource/ClassicModels)</jta-data-source>
+		<class>net.martenscs.osgi.example.domain.CustomerEntity</class>
+		<class>net.martenscs.osgi.example.domain.EmployeeEntity</class>
+		<class>net.martenscs.osgi.example.domain.OfficeEntity</class>
+		<class>net.martenscs.osgi.example.domain.OrderdetailEntity</class>
+		<class>net.martenscs.osgi.example.domain.OrderdetailPK</class>
+		<class>net.martenscs.osgi.example.domain.OrderEntity</class>
+		<class>net.martenscs.osgi.example.domain.PaymentEntity</class>
+		<class>net.martenscs.osgi.example.domain.PaymentPK</class>
+		<class>net.martenscs.osgi.example.domain.ProductEntity</class>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<!--<property name="openjpa.RuntimeUnenhancedClasses" value="supported"/> -->
+			<property name="openjpa.Log" value="DefaultLevel=INFO, Tool=INFO" />
+			<!--<property name="openjpa.jdbc.DBDictionary" value="postgres"/> -->
+			<property name="openjpa.jdbc.DBDictionary" value="derby" />
+
+		</properties>
+	</persistence-unit>
+</persistence>
+

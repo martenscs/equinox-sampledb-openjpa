@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+
+<target name="openjpa" sequenceNumber="147">
+<locations>
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.osgi.web.feature.group" version="1.0.0.201412011738"/>
+<unit id="org.apache.felix.webconsole.feature.group" version="2.0.6.201412011738"/>
+<unit id="org.apache.felix.webconsole.source.feature.group" version="2.0.6.201412011738"/>
+<unit id="org.eclipse.osgi.web.source.feature.group" version="1.0.0.201412011738"/>
+<unit id="org.equinox.osgi.runtime.feature.group" version="0.0.1.201412011738"/>
+<repository location="http://p2.martenscs.net/equinox-runtime"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="commons.feature.group" version="2.3.4"/>
+<unit id="commons.source.feature.group" version="2.3.4"/>
+<unit id="framework.feature.group" version="3.0.1"/>
+<unit id="framework.source.feature.group" version="3.0.1"/>
+<unit id="jndi.feature.group" version="1.0.0"/>
+<unit id="jndi.source.feature.group" version="1.0.0"/>
+<unit id="jpa.feature.group" version="1.0.1"/>
+<unit id="jpa.source.feature.group" version="1.0.1"/>
+<unit id="transaction.feature.group" version="1.0.1"/>
+<unit id="transaction.source.feature.group" version="1.0.1"/>
+<repository location="http://p2.martenscs.net/aries"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="sampledb.feature.group" version="1.0.0.201412022043"/>
+<repository location="http://p2.martenscs.net/sampledb"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="openjpa.feature.group" version="2.3.0"/>
+<unit id="openjpa.source.feature.group" version="2.3.0"/>
+<repository location="http://p2.martenscs.net/karaf/enterprise/3.0.1"/>
+</location>
+</locations>
+</target>

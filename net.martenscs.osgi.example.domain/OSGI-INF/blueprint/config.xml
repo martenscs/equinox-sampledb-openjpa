@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint default-activation="eager" xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jpa="http://aries.apache.org/xmlns/jpa/v1.0.0" xmlns:tx="http://aries.apache.org/xmlns/transactions/v1.0.0"
+
+	xsi:schemaLocation="
+            http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0 
+            http://www.w3.org/2001/XMLSchema-instance http://www.w3.org/2001/XMLSchema-instance 
+            http://aries.apache.org/xmlns/jpa/v1.0.0 http://aries.apache.org/xmlns/jpa/v1.0.0 
+            http://aries.apache.org/xmlns/transactions/v1.0.0 http://aries.apache.org/xmlns/transactions/v1.0.0 ">
+
+
+	<bean id="customerService" class="net.martenscs.osgi.example.repository.CustomerRepository" init-method="init">
+		<jpa:context unitname="sample" property="entityManager" />
+		<tx:transaction method="*" value="Required" />
+	</bean>
+	<bean id="employeeService" class="net.martenscs.osgi.example.repository.EmployeeRepository" init-method="init">
+		<jpa:context unitname="sample" property="entityManager" />
+		<tx:transaction method="*" value="Required" />
+	</bean>
+	<bean id="officeService" class="net.martenscs.osgi.example.repository.OfficeRepository" init-method="init">
+		<jpa:context unitname="sample" property="entityManager" />
+		<tx:transaction method="*" value="Required" />
+	</bean>
+	<bean id="orderService" class="net.martenscs.osgi.example.repository.OrderRepository" init-method="init">
+		<jpa:context unitname="sample" property="entityManager" />
+		<tx:transaction method="*" value="Required" />
+	</bean>
+
+	<bean id="productService" class="net.martenscs.osgi.example.repository.CustomerRepository" init-method="init">
+		<jpa:context unitname="sample" property="entityManager" />
+		<tx:transaction method="*" value="Required" />
+	</bean>
+
+	<bean id="paymentService" class="net.martenscs.osgi.example.repository.PaymentRepository" init-method="init">
+		<jpa:context unitname="sample" property="entityManager" />
+		<tx:transaction method="*" value="Required" />
+	</bean>
+
+
+	<service ref="customerService" interface="net.martenscs.osgi.example.domain.api.Repository">
+		<service-properties>
+			<entry key="osgi.jndi.service.name" value="repository/customer" />
+		</service-properties>
+	</service>
+
+	<service ref="employeeService" interface="net.martenscs.osgi.example.domain.api.Repository">
+		<service-properties>
+			<entry key="osgi.jndi.service.name" value="repository/employee" />
+		</service-properties>
+	</service>
+
+	<service ref="officeService" interface="net.martenscs.osgi.example.domain.api.Repository">
+		<service-properties>
+			<entry key="osgi.jndi.service.name" value="repository/office" />
+		</service-properties>
+	</service>
+
+	<service ref="orderService" interface="net.martenscs.osgi.example.domain.api.Repository">
+		<service-properties>
+			<entry key="osgi.jndi.service.name" value="repository/order" />
+		</service-properties>
+	</service>
+
+	<service ref="productService" interface="net.martenscs.osgi.example.domain.api.Repository">
+		<service-properties>
+			<entry key="osgi.jndi.service.name" value="repository/product" />
+		</service-properties>
+	</service>
+
+	<service ref="paymentService" interface="net.martenscs.osgi.example.domain.api.Repository">
+		<service-properties>
+			<entry key="osgi.jndi.service.name" value="repository/payment" />
+		</service-properties>
+	</service>
+</blueprint>
