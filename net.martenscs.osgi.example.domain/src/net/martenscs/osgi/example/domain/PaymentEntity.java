@@ -13,9 +13,9 @@ import java.sql.Timestamp;
  */
 @Entity
 @NamedQueries({
-		@NamedQuery(name = "findPaymentById", query = "select p from OrderEntity p WHERE p.id.customernumber = :id and p.id.checknumber = :ckn"),
-		@NamedQuery(name = "findAllPayments", query = "select p from OrderEntity p"),
-		@NamedQuery(name = "deletePaymentById", query = "delete from OrderEntity p WHERE p.id.customernumber = :id and p.id.checknumber = :ckn") })
+		@NamedQuery(name = "findPaymentById", query = "select p from PaymentEntity p WHERE p.id.customernumber = :id and p.id.checknumber = :ckn"),
+		@NamedQuery(name = "findAllPayments", query = "select p from PaymentEntity p"),
+		@NamedQuery(name = "deletePaymentById", query = "delete from PaymentEntity p WHERE p.id.customernumber = :id and p.id.checknumber = :ckn") })
 @Table(name = "PAYMENTS")
 public class PaymentEntity implements Serializable, Payment<PaymentPK> {
 	private static final long serialVersionUID = 1L;
