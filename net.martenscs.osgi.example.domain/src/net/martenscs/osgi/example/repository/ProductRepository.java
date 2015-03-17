@@ -8,6 +8,7 @@ public class ProductRepository extends GenericRepository<Product, String>
 		implements Repository<Product, String> {
 
 	public void init() {
+		System.out.println();
 	}
 
 	@Override

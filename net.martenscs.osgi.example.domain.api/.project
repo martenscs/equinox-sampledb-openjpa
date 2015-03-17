@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>net.martenscs.osgi.example.domain</name>
+	<name>net.martenscs.osgi.example.domain.api</name>
 	<comment></comment>
 	<projects>
 	</projects>

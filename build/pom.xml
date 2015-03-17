@@ -14,6 +14,8 @@
 	<modules>
 		<module>../net.martenscs.osgi.example.domain</module>
 		<module>../net.martenscs.osgi.example.domain.api</module>
+		<module>sampledb.jpa</module>
+		<module>repo</module>
 	</modules>
 	<repositories>
 		<repository>

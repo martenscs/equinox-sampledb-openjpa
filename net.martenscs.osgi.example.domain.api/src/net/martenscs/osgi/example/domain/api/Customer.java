@@ -1,5 +1,8 @@
 package net.martenscs.osgi.example.domain.api;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "customer")
 public interface Customer {
 
 	public abstract int getCustomernumber();
